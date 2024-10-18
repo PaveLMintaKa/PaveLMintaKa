@@ -7,40 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenido a la Tienda de Ropa</h1>
-    <div class="store">
-        <h2>Productos disponibles</h2>
-        <div class="products">
-            <div class="product">
-                <h3>Camisa</h3>
-                <p>Precio: $20</p>
-                <button onclick="agregarAlCarrito('Camisa', 20)">Agregar al carrito</button>
-            </div>
-            <div class="product">
-                <h3>Pantalones</h3>
-                <p>Precio: $30</p>
-                <button onclick="agregarAlCarrito('Pantalones', 30)">Agregar al carrito</button>
-            </div>
-            <div class="product">
-                <h3>Zapatos</h3>
-                <p>Precio: $50</p>
-                <button onclick="agregarAlCarrito('Zapatos', 50)">Agregar al carrito</button>
-            </div>
-        </div>
+    <header>
+        <h1>Tienda de Ropa</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>Carrito de compras</h2>
-        <ul id="carrito">
-            <!-- Los productos añadidos aparecerán aquí -->
-        </ul>
-        <p id="total">Total: $0</p>
-        <button onclick="comprar()">Comprar</button>
-    </div>
+    <main>
+        <section class="products">
+            <h2>Nuestros Productos</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Camisa">
+                    <h3>Camisa Azul</h3>
+                    <p>Precio: $25</p>
+                    <button onclick="agregarAlCarrito('Camisa Azul', 25)">Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Pantalones">
+                    <h3>Pantalones Blancos</h3>
+                    <p>Precio: $40</p>
+                    <button onclick="agregarAlCarrito('Pantalones Blancos', 40)">Agregar al carrito</button>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Zapatos">
+                    <h3>Zapatos Negros</h3>
+                    <p>Precio: $60</p>
+                    <button onclick="agregarAlCarrito('Zapatos Negros', 60)">Agregar al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito">
+                <!-- Productos agregados aparecerán aquí -->
+            </ul>
+            <p id="total">Total: $0</p>
+            <button class="checkout" onclick="comprar()">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
 
-<!---
-PaveLMintaKa/PaveLMintaKa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
